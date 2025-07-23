@@ -1,5 +1,48 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedCodeBlock extends Struct.ComponentSchema {
+  collectionName: 'components_shared_code_blocks';
+  info: {
+    description: 'A component for displaying code snippets with syntax highlighting';
+    displayName: 'Code Block';
+    icon: 'code';
+  };
+  attributes: {
+    code: Schema.Attribute.Text & Schema.Attribute.Required;
+    filename: Schema.Attribute.String;
+    language: Schema.Attribute.Enumeration<
+      [
+        'javascript',
+        'typescript',
+        'html',
+        'css',
+        'json',
+        'dart',
+        'ruby',
+        'jsx',
+        'tsx',
+        'python',
+        'java',
+        'bash',
+        'sql',
+        'markdown',
+        'yaml',
+        'xml',
+        'php',
+        'go',
+        'rust',
+        'c',
+        'cpp',
+        'csharp',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'javascript'>;
+    showLineNumbers: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +108,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.code-block': SharedCodeBlock;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

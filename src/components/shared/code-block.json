@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_shared_code_blocks",
+  "info": {
+    "displayName": "Code Block",
+    "icon": "code",
+    "description": "A component for displaying code snippets with syntax highlighting"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "text",
+      "required": true
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "javascript",
+        "typescript",
+        "html",
+        "css",
+        "json",
+        "dart",
+        "ruby",
+        "jsx",
+        "tsx",
+        "python",
+        "java",
+        "bash",
+        "sql",
+        "markdown",
+        "yaml",
+        "xml",
+        "php",
+        "go",
+        "rust",
+        "c",
+        "cpp",
+        "csharp"
+      ],
+      "default": "javascript",
+      "required": true
+    },
+    "filename": {
+      "type": "string",
+      "required": false
+    },
+    "showLineNumbers": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
