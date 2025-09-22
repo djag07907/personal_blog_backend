@@ -33,7 +33,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "author": {
       "type": "relation",
@@ -49,8 +51,18 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.rich-text", "shared.code-block", "shared.media", "shared.quote"],
+      "components": [
+        "shared.rich-text",
+        "shared.code-block",
+        "shared.media",
+        "shared.quote"
+      ],
       "required": false
+    },
+    "editorPick": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   }
 }
