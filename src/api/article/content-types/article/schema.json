@@ -63,6 +63,11 @@
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "views": {
+      "type": "integer",
+      "required": false,
+      "default": 0
     }
   }
 }
