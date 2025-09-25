@@ -10,22 +10,15 @@
     "favicon": null
   },
   "about": {
-    "title": "About the strapi blog",
-    "blocks": [
-      {
-        "__component": "shared.quote",
-        "title": "Thelonius Monk",
-        "body": "You've got to dig it to dig it, you dig?"
-      },
-      {
-        "__component": "shared.rich-text",
-        "body": "## Dedit imago conspicuus cum capillis totidem inhibere\n\nLorem markdownum **rerum**, est limine: columbas: ab infelix hostem arbore nudis\ncrudelis. Videtur reliquit ambo ferrum dote sub amne fatis **illuc**, in magis,\nnec."
-      },
-      {
-        "__component": "shared.media",
-        "file": "coffee-art.jpg"
-      }
-    ]
+    "title": "About Me",
+    "description": "",
+    "content": "",
+    "image": null,
+    "skills": [],
+    "experience": [],
+    "education": [],
+    "achievements": [],
+    "blocks": []
   },
   "categories": [
     {

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_about_education",
+  "info": {
+    "displayName": "Education",
+    "icon": "graduation-cap",
+    "description": "Educational background entry"
+  },
+  "options": {},
+  "attributes": {
+    "institution": {
+      "type": "string",
+      "required": true
+    },
+    "degree": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    }
+  }
+}

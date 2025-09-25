@@ -1,5 +1,54 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutAchievement extends Struct.ComponentSchema {
+  collectionName: 'components_about_achievements';
+  info: {
+    description: 'Professional achievement or certification';
+    displayName: 'Achievement';
+    icon: 'trophy';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface AboutEducation extends Struct.ComponentSchema {
+  collectionName: 'components_about_education';
+  info: {
+    description: 'Educational background entry';
+    displayName: 'Education';
+    icon: 'graduation-cap';
+  };
+  attributes: {
+    degree: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
+    endDate: Schema.Attribute.Date;
+    institution: Schema.Attribute.String & Schema.Attribute.Required;
+    startDate: Schema.Attribute.Date & Schema.Attribute.Required;
+  };
+}
+
+export interface AboutExperience extends Struct.ComponentSchema {
+  collectionName: 'components_about_experiences';
+  info: {
+    description: 'Professional work experience entry';
+    displayName: 'Experience';
+    icon: 'briefcase';
+  };
+  attributes: {
+    company: Schema.Attribute.String & Schema.Attribute.Required;
+    current: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    endDate: Schema.Attribute.Date;
+    position: Schema.Attribute.String & Schema.Attribute.Required;
+    startDate: Schema.Attribute.Date & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedCodeBlock extends Struct.ComponentSchema {
   collectionName: 'components_shared_code_blocks';
   info: {
@@ -108,6 +157,9 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about.achievement': AboutAchievement;
+      'about.education': AboutEducation;
+      'about.experience': AboutExperience;
       'shared.code-block': SharedCodeBlock;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

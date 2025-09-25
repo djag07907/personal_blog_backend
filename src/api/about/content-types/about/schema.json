@@ -13,11 +13,50 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "About Me"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "skills": {
+      "type": "json",
+      "required": false
+    },
+    "experience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about.experience",
+      "required": false
+    },
+    "education": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about.education",
+      "required": false
+    },
+    "achievements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about.achievement",
+      "required": false
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"],
+      "required": false
     }
   }
 }

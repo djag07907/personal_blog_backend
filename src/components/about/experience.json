@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_about_experiences",
+  "info": {
+    "displayName": "Experience",
+    "icon": "briefcase",
+    "description": "Professional work experience entry"
+  },
+  "options": {},
+  "attributes": {
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "current": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

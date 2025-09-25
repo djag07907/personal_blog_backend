@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_about_achievements",
+  "info": {
+    "displayName": "Achievement",
+    "icon": "trophy",
+    "description": "Professional achievement or certification"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
